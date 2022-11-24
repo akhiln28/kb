@@ -1,5 +1,5 @@
 export const SITE = {
-	title: 'Documentation',
+	title: 'Sciences',
 	description: 'Your website description.',
 	defaultLanguage: 'en_US',
 };
