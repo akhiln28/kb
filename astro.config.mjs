@@ -23,6 +23,5 @@ export default defineConfig({
       ],
     ],
   },
-  site: 'https://akhiln28.github.io',
-  base: '/loose-limb',
+  site: 'https://astro.grepwise.com',
 });
