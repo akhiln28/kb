@@ -1,15 +1,27 @@
 import { defineConfig } from 'astro/config';
-import katex  from 'astro-katex';
-
-// https://astro.build/config
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
-import mdx from "@astrojs/mdx";
+import preact from '@astrojs/preact';
+import react from '@astrojs/react';
+import katex from 'astro-katex';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx(), katex()],
-  site: 'https://akhiln28.github.io',
-  base: '/loose-limb'
+  integrations: [
+    // Enable Preact to support Preact JSX components.
+    preact(),
+    // Enable React for the Algolia search component.
+    react(),
+    katex(),
+  ],
+  markdown: {
+    remarkPlugins: ['remark-math'],
+    rehypePlugins: [
+      [
+        'rehype-katex',
+        {
+          // Katex plugin options
+        },
+      ],
+    ],
+  },
+  site: `http://astro.build`,
 });
