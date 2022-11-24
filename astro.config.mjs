@@ -23,5 +23,6 @@ export default defineConfig({
       ],
     ],
   },
-  site: `http://astro.build`,
+  site: 'https://akhiln28.github.io',
+  base: '/loose-limb',
 });
